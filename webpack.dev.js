@@ -2,13 +2,13 @@
 
 const path = require('path')
 const webpack = require('webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    search: './src/search.js',
+    index: './src/index/index.js',
+    search: './src/search/index.js',
   },
   output: {
     path: path.join(__dirname, 'dist'),
