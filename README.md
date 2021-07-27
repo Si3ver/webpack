@@ -11,3 +11,4 @@
 7. cssnano <= 4.1.11
 8. html-webpack-plugin <= 4.5.2
 9. postcss-loader <=4.3.0
+10. raw-loader <= 1.0.0 (webpack5支持asset模块，废弃了raw-loader/url-loader/file-loader)
