@@ -34,6 +34,12 @@ module.exports = {
               plugins: ['autoprefixer']
             }
           }
+        }, {
+          loader: 'px2rem-loader',
+          options: {
+            remUni: 75,
+            remPrecision: 8,
+          }
         }, 'less-loader']
       },
       {

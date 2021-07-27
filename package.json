@@ -10,7 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "lib-flexible": "^0.3.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
@@ -27,6 +29,7 @@
     "mini-css-extract-plugin": "1.6.2",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss-loader": "^4.3.0",
+    "px2rem-loader": "^0.1.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "style-loader": "2.0.0",
