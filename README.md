@@ -13,7 +13,7 @@
 9. postcss-loader <=4.3.0
 10. raw-loader <= 1.0.0 (webpack5支持asset模块，废弃了raw-loader/url-loader/file-loader)
 
-## source map
+### source map
 
 > [JavaScript Source Map 详解](https://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
 
@@ -22,4 +22,27 @@
 + cheap: 不包含列信息
 + inline: 将`.map`作为`DataURI`嵌入，不单独生成`.map`文件
 + module: 包含`loader`的`sourcemap`
+
+### 提取公共资源
+
+**方式一：用 script 引入**
++ [html-webpack-externals-plugin](https://www.npmjs.com/package/html-webpack-externals-plugin)
++ 通过`script标签`直接引入cdn
+
+**方式二：打包成 vendors 脚本**
++ [splitChunksPlugin](https://webpack.js.org/plugins/split-chunks-plugin/#root)
+
+```sh
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /(react|react-dom)/,
+          name: 'vendors',
+          chunks: 'all',
+        }
+      }
+    }
+  },
+```
 
