@@ -64,3 +64,15 @@
 **懒加载js脚本的方式**
 1. CJS：require.ensure
 2. ES6: 动态import(目前还没有原生支持，需要babel转换) -- @babel/plugin-syntax-dynamic-import
+
+### eslint
+
+**parser**
++ 将代码转换为 ESTree，ESLint 会对 ESTree 进行校验
++ esprima
++ babel-eslint
+
+### 打包组件库、基础库
+
++ library 指定库的全局变量
++ libraryTarget 支持库引入的方式
