@@ -129,11 +129,12 @@ module.exports = {
   ],
   optimization: {
     splitChunks: {
+      minSize: 0, // 最小文件大小
       cacheGroups: {
         commons: {
-          test: /(react|react-dom)/,
-          name: 'vendors',
+          name: 'commons',
           chunks: 'all',
+          minChunks: 2, // 最少引用次数
         }
       }
     }

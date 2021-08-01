@@ -3,7 +3,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import logo from './images/logo.png'
+import '../../common'
 import './search.less'
+import { common } from '../../common'
+
+console.log(common())
 
 class Search extends React.Component {
   render () {
