@@ -76,3 +76,25 @@
 
 + library 指定库的全局变量
 + libraryTarget 支持库引入的方式
+
+### SSR
+
++ 原理：使用`react-dom/server`的 `renderToString` 方法，把 React 组件渲染成字符串
++ 服务端路由返回对应的模版
++ 客户端打出针对服务端的组件
+
+```sh
+# 构建
+$ yarn build:ssr
+# 启动nodejs server
+$ yarn server
+# 访问 127.0.0.1:3000/search
+```
+
+**ssr打包常见问题**
+1. 环境全局变量 hack
+  + 组件适配
+  + 请求适配： fetch、ajax 改写成 isomorphic-fetch 或者 axios
+2. 样式问题（node.js无法解析css）
+  + 方案一：ignore-loader忽略掉css解析
+  + 方案二：style-loader替换成isomorphic-style-loader

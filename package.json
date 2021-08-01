@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "build:ssr": "webpack --config webpack.ssr.js",
+    "server": "node ./server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "glob": "^7.1.7",
     "html-webpack-externals-plugin": "^3.8.0",
