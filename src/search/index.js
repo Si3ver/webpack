@@ -15,9 +15,31 @@ if(4 > 5) {
 }
 
 class Search extends React.Component {
+
+  constructor() {
+    super()
+    this.state = {
+      Text: null
+    };
+  }
+
+  loadComponent() {
+    debugger
+    import('./text.js').then((Text) => {
+      this.setState({
+          Text: Text.default
+      });
+  });
+  }
+
   render () {
+    const { Text } = this.state;
+
     return <div className="search-text">
-      Search Text<img src={ logo } />
+      {
+        Text ? <Text /> : null
+      }
+      Search Text<img src={ logo } onClick={ this.loadComponent.bind(this) } />
     </div>
   }
 }

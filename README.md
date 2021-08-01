@@ -48,5 +48,19 @@
 
 ### tree-shaking
 
++ 支持ESM，不支持CJS
 + mode=production 默认开启 tree-shaking
 + 纯函数（无副作用）的代码才能被摇除
+
+### scope hoisting
+
++ 支持ESM，不支持CJS
++ mode=production，默认开启`module-concatenation-plugin`
++ 原理：将所有模块的代码按照引用顺序放在一个函数作用域里，然后适当地重命名一些变量以防止变量名冲突
++ 对比：通过`scope hoisting`可以减少声明代码和内存开销
+
+### 代码分割 & 动态import
+
+**懒加载js脚本的方式**
+1. CJS：require.ensure
+2. ES6: 动态import(目前还没有原生支持，需要babel转换) -- @babel/plugin-syntax-dynamic-import
