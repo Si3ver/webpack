@@ -12,3 +12,14 @@
 8. html-webpack-plugin <= 4.5.2
 9. postcss-loader <=4.3.0
 10. raw-loader <= 1.0.0 (webpack5支持asset模块，废弃了raw-loader/url-loader/file-loader)
+
+## source map
+
+> [JavaScript Source Map 详解](https://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
+
++ eval: 使用eval包裹模块代码
++ source map: 产生`.map`文件
++ cheap: 不包含列信息
++ inline: 将`.map`作为`DataURI`嵌入，不单独生成`.map`文件
++ module: 包含`loader`的`sourcemap`
+
