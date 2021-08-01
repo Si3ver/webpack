@@ -98,3 +98,7 @@ $ yarn server
 2. 样式问题（node.js无法解析css）
   + 方案一：ignore-loader忽略掉css解析
   + 方案二：style-loader替换成isomorphic-style-loader
+
+**trick**
+1. 组件渲染占位符
+2. 数据占位符
