@@ -1,5 +1,5 @@
 import { helloworld } from "./helloworld";
-import common from '../../common'
+import { common } from '../../common'
 
 console.log(common())
 
