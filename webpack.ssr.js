@@ -37,7 +37,7 @@ const setMPA = () => {
     }
   })
 
-  console.log(entry)
+  // console.log(entry)
 
   return {
     entry,

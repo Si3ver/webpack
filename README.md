@@ -102,3 +102,7 @@ $ yarn server
 **trick**
 1. 组件渲染占位符
 2. 数据占位符
+
+### 优化构建时命令行的显示日志
+
++ [friendly-errors-webpack-plugin](https://github.com/geowarin/friendly-errors-webpack-plugin)

@@ -87,6 +87,7 @@ module.exports = {
   ].concat(htmlWebpackPlugins),
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
+    stats: 'errors-only'
   },
 }
