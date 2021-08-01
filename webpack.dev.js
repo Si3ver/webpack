@@ -43,7 +43,7 @@ const { entry, htmlWebpackPlugins } = setMPA()
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-source-map',
+  devtool: 'source-map',
   entry,
   output: {
     path: path.join(__dirname, 'dist'),
@@ -68,7 +68,7 @@ module.exports = {
         test: /.(png|jpg|jpeg|gif)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               limit: 10240, // 小于10KB的图片，打包进JS
             }
@@ -82,9 +82,9 @@ module.exports = {
     ]
   },
   plugins: [
-    ...htmlWebpackPlugins,
+    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
-  ],
+  ].concat(htmlWebpackPlugins),
   devServer: {
     contentBase: './dist',
     hot: true
