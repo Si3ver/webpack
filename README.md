@@ -46,3 +46,7 @@
   },
 ```
 
+### tree-shaking
+
++ mode=production 默认开启 tree-shaking
++ 纯函数（无副作用）的代码才能被摇除
